@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="leyou-authentication-common" />
+        <module name="leyou-authentication-service" />
+        <module name="leyou-search" />
+        <module name="ly-cart" />
+        <module name="ly-common" />
+        <module name="ly-gateway" />
+        <module name="ly-item-interface" />
+        <module name="ly-item-service" />
+        <module name="ly-order" />
+        <module name="ly-page" />
+        <module name="ly-registry" />
+        <module name="ly-serarch" />
+        <module name="ly-sms" />
+        <module name="ly-upload" />
+        <module name="ly-user-interface" />
+        <module name="ly-user-service" />
+        <module name="utmi-animals-interface" />
+        <module name="utmi-animals-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ly-animal" target="1.8" />
+      <module name="ly-animals" target="1.8" />
+      <module name="utmi-animals" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

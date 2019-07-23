@@ -1,0 +1,42 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://192.168.0.147:3306/leyou?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: wang
+    password: wang123
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+  jackson:
+    default-property-inclusion: non_null
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+      lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+      lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+      prefer-ip-address: true # 返回eureka的是ip，而不是主机名
+      ip-address: 127.0.0.1 # 设置返回的ip是啥
+      instance-id: ${spring.application.name}:${server.port}
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.leyou.order.pojo
+ly:
+  jwt:
+    pubKeyPath: D:\\rsa\\rsa.pub # 公钥地址
+    cookieName: LY_TOKEN
+  worker:
+    workerId: 1
+    dataCenterId: 1
+  pay:
+    appID: wx8397f8696b538317
+    mchID: 1473426802
+    key: T6m9ik73b0kn9g5v426MKfHQH7X8rKwb
+    httpConnectTimeoutMs: 1000
+    httpReadTimeoutMs: 8000
+    notifyUrl: http://1f50a57b.ngrok.io/notify

@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.0.147:9300     # elasticsearch 服务的地址
+  jackson:
+    default-property-inclusion: non_null  # 结果为null就排除
+  rabbitmq:
+    host: 192.168.0.147
+    username: leyou
+    password: leyou
+    virtual-host: /leyou
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5  #五秒拉取一次服务
+  instance:
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
