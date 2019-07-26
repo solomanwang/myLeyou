@@ -69,7 +69,7 @@ public class OrderService {
         order.setBuyerNick(user.getUsername());
         order.setUserId(user.getId());
         order.setBuyerRate(false);
-        //  1.3 收获人信息
+        //  1.3 收货人信息
         AddressDTO addr = AddressClient.findById(dto.getAddressId());
         order.setReceiver(addr.getName());
         order.setReceiverAddress(addr.getAddress());

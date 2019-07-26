@@ -11,7 +11,9 @@ import java.util.UUID;
 public class CodecUtils {
 
 
-
+    /**
+     *  md5 加盐加密
+     * */
     public static String md5Hex(String data,String salt) {
         if (StringUtils.isBlank(salt)) {
             salt = data.hashCode() + "";
@@ -26,6 +28,9 @@ public class CodecUtils {
         return DigestUtils.sha512Hex(salt + DigestUtils.sha512Hex(data));
     }
 
+    /**
+     *  用uuid生成盐
+     * */
     public static String generateSalt(){
         return StringUtils.replace(UUID.randomUUID().toString(), "-", "");
     }

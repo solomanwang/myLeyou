@@ -46,7 +46,7 @@ public class UserService {
             default:
                 throw new LyException(ExceptionEnum.INVALID_USER_DATA_TYPE);
         }
-        //只需要判断有无，所以采用技术查询效率较高
+        //只需要判断有无，所以采用计数查询效率较高
         return userMapper.selectCount(user) == 0;
     }
     //发送短信验证码
@@ -77,7 +77,9 @@ public class UserService {
         //保存用户
         user.setCreated(new Date());
         int i = userMapper.insertSelective(user);
-
+        if (i < 1){
+            throw new LyException(ExceptionEnum.CREATE_USER_ERROR);
+        }
     }
 
     //  根据用户名密码查询用户

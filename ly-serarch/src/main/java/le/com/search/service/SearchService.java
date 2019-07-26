@@ -237,7 +237,6 @@ public class SearchService {
         // Page<Goods> result = repository.search(queryBuilder.build());
         AggregatedPage<Goods> result = template.queryForPage(queryBuilder.build(), Goods.class);
 
-        ;
         long total = result.getTotalElements();
         long totalPage = result.getTotalPages();
         List<Goods> content = result.getContent();

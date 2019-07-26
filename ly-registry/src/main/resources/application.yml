@@ -4,7 +4,7 @@ server:
 #服务名称
 spring:
   application:
-    name: ly-registry
+    name: soloman-registry
 #单个eureka的情况
 eureka:
   client:

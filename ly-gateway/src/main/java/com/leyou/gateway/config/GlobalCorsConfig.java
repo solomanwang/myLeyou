@@ -9,7 +9,7 @@ import org.springframework.web.filter.CorsFilter;
 /**
  * @Auther: 王忠强
  * @Date: 2018/12/11 16:58
- * @Description:
+ * @Description:  CORS 跨域请求配置
  */
 @Configuration
 public class GlobalCorsConfig {
@@ -18,9 +18,6 @@ public class GlobalCorsConfig {
         //1.添加CORS配置信息
         CorsConfiguration config = new CorsConfiguration();
         //1) 允许的域,不要写*，否则cookie就无法使用了
-        config.addAllowedOrigin("http://manage.utmi.com");
-        config.addAllowedOrigin("http://api.utmi.com");
-        config.addAllowedOrigin("http://www.utmianimal.com");
         config.addAllowedOrigin("http://manage.leyou.com");
         config.addAllowedOrigin("http://api.leyou.com");
         config.addAllowedOrigin("http://www.leyou.com");

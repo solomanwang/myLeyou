@@ -49,6 +49,7 @@ public enum ExceptionEnum {
     UPDTAE_ORDER_STATUS_ERROR(500,"更新订单状态失败"),
     INVALID_USER_DATA_TYPE(400,"用户数据类型无效"),
     INVALID_USERNAME_PASSWORD(400,"用户或者密码错误"),
+    CREATE_USER_ERROR(500,"注册用户失败"),
     INVALID_VERIFY_CODE(400,"无效的验证码"),
     SPEC_GROUP_NOT_FOND(404,"商品规格组未查到"),
     SPEC_PARAM_NOT_FOND(404,"规格组参数未查到"),

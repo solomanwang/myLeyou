@@ -3,7 +3,7 @@ package com.leyou.sms.mq;
 import com.leyou.common.utils.JsonUtils;
 import com.leyou.sms.utils.Smsutils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
